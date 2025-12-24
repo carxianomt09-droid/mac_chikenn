@@ -69,9 +69,10 @@ function generarLink(total) {
     texto += `*Cliente:* ${nom || 'No indicado'}%0A`;
     texto += `*Dirección:* ${dir || 'No indicada'}`;
 
-    btn.href = `https://wa.me/51928371660?text=${texto}`; // Cambia el 51999... por tu número
+    btn.href = `https://wa.me/51979926808?text=${texto}`; // Cambia el 51999... por tu número
 }
 
 // Actualizar link al escribir datos del cliente
 document.getElementById('cliente-nombre').addEventListener('input', () => actualizarCarrito());
 document.getElementById('cliente-direccion').addEventListener('input', () => actualizarCarrito());
+
