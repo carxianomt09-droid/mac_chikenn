@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAC CHICKEN | Sabor Real</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-content">
+            <h1 class="logo">
+            MAC CHICKEN POLLERIA</h1>
+            <nav>
+                <ul>
+                    <li><a href="#brasas">Brasas</a></li>
+                    <li><a href="#mostros">Mostros</a></li>
+                    <li><a href="#piqueos">Piqueos</a></li>
+                    <li><a href="#adicionales">Adicionales</a></li>
+                    <li><a href="#bebidas">Bebidas</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container main-layout">
+        <main class="menu">
+            <section id="brasas" class="categoria">
+                <h2><i class="fas fa-drumstick-bite"></i> Nuestras Brasas</h2>
+                <div class="productos-grid">
+                    <div class="card producto" data-nombre="1 Pollo a la Brasa" data-precio="60.00">
+                        <div class="info">
+                            <img src="imagenes/pollo.jpg" width="200" height="100">
+                            <h3>1 Pollo + Papas + Ensalada</h3>
+                            <p class="precio">S/ 60.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="1/2 Pollo a la Brasa" data-precio="35.00">
+                        <div class="info">
+                            <img src="imagenes/pollo2.jpg" width="200" height="100">
+                            <h3>1/2 Pollo + Papas + Ensalada</h3>
+                            <p class="precio">S/ 35.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="1/4 Pollo a la Brasa" data-precio="17.00">
+                        <div class="info">
+                            <img src="imagenes/pollo3.jpg" width="200" height="100">
+                            <h3>1/4 Pollo + Papas + Ensalada</h3>
+                            <p class="precio">S/ 17.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="mostros" class="categoria">
+                <h2><i class="fas fa-fire"></i> Mostros</h2>
+                <div class="productos-grid">
+                    <div class="card producto" data-nombre="Mostro 1/4 Pollo" data-precio="22.00">
+                        <div class="info">
+                            <img src="imagenes/pollo4.jpg" width="200" height="100">
+                            <h3>Mostro (1/4 Pollo + Chaufa + Papas + Ensalada)</h3>
+                            <p class="precio">S/ 22.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="piqueos" class="categoria">
+                <h2><i class="fas fa-utensils"></i> Piqueos</h2>
+                <div class="productos-grid">
+                    <div class="card producto" data-nombre="Mollejitas Fritas" data-precio="16.00">
+                        <div class="info">
+                            <img src="imagenes/mollejas.jpg" width="200" height="100">
+                            <h3>Mollejitas Fritas + Ensalada</h3>
+                            <p class="precio">S/ 16.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="Pollo a la Plancha" data-precio="18.00">
+                        <div class="info">
+                            <img src="imagenes/pollo6.jpg" width="200" height="100">
+                            <h3>Pollo a la Plancha + Papas + Ensalada</h3>
+                            <p class="precio">S/ 18.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="Chaufa de Pollo" data-precio="16.00">
+                        <div class="info">
+                            <img src="imagenes/chaufa.jpg" width="200" height="100">
+                            <h3>Chaufa de Pollo</h3>
+                            <p class="precio">S/ 16.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="Salchipapa" data-precio="10.00">
+                        <div class="info">
+                            <img src="imagenes/salchipapa.jpg" width="200" height="100">
+                            <h3>Salchipapa</h3>
+                            <p class="precio">S/ 10.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="adicionales" class="categoria">
+                <h2><i class="fas fa-plus-circle"></i> Adicionales</h2>
+                <div class="productos-grid">
+                    <div class="card producto" data-nombre="Porción Papas" data-precio="8.00">
+                        <div class="info">
+                            <img src="imagenes/papas.jpg" width="200" height="100">
+                            <h3>Porción de Papas Fritas</h3>
+                            <p class="precio">S/ 8.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="Ensalada Grande" data-precio="6.00">
+                        <div class="info">
+                            <img src="imagenes/ensalada1.jpg" width="200" height="100">
+                            <h3>Porción Grande de Ensalada</h3>
+                            <p class="precio">S/ 6.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card producto" data-nombre="Ensalada Pequeña" data-precio="3.00">
+                        <div class="info">
+                            <img src="imagenes/ensalada.jpg" width="200" height="100">
+                            <h3>Porción Pequeña de Ensalada</h3>
+                            <p class="precio">S/ 3.00</p>
+                            <div class="controles">
+                                <button onclick="menos(this)">-</button>
+                                <span class="cantidad">0</span>
+                                <button onclick="mas(this)">+</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="bebidas" class="categoria">
+                <h2><i class="fas fa-glass-whiskey"></i> Bebidas</h2>
+                <div class="productos-grid">
+                    <div class="card producto" data-nombre="Chicha 1LT" data-precio="10.00">
+                        <div class="info"><img src="imagenes/chicha1.jpg" width="200" height="100"><h3>Chicha Morada 1 LT</h3><p class="precio">S/ 10.00</p>
+                        <div class="controles"><button onclick="menos(this)">-</button><span class="cantidad">0</span><button onclick="mas(this)">+</button></div></div>
+                    </div>
+                    <div class="card producto" data-nombre="Chicha 1/2LT" data-precio="5.00">
+                        <div class="info"><img src="imagenes/chicha2.jpg" width="200" height="100"><h3>Chicha Morada 1/2 LT</h3><p class="precio">S/ 5.00</p>
+                        <div class="controles"><button onclick="menos(this)">-</button><span class="cantidad">0</span><button onclick="mas(this)">+</button></div></div>
+                    </div>
+                    <div class="card producto" data-nombre="Gaseosa 1.5LT" data-precio="8.00">
+                        <div class="info"><img src="imagenes/gaseosa1.jpg" width="200" height="100"><h3>Gaseosa 1.5 LT</h3><p class="precio">S/ 8.00</p>
+                        <div class="controles"><button onclick="menos(this)">-</button><span class="cantidad">0</span><button onclick="mas(this)">+</button></div></div>
+                    </div>
+                    <div class="card producto" data-nombre="Gaseosa 500ML" data-precio="4.00">
+                        <div class="info"><img src="imagenes/gaseosa500.jpg" width="200" height="100"><h3>Gaseosa 500 ML</h3><p class="precio">S/ 4.00</p>
+                        <div class="controles"><button onclick="menos(this)">-</button><span class="cantidad">0</span><button onclick="mas(this)">+</button></div></div>
+                    </div>
+                    <div class="card producto" data-nombre="Agua 500ML" data-precio="2.00">
+                        <div class="info"><img src="imagenes/agua.jpg" width="200" height="100"><h3>Agua Mineral 500 ML</h3><p class="precio">S/ 2.00</p>
+                        <div class="controles"><button onclick="menos(this)">-</button><span class="cantidad">0</span><button onclick="mas(this)">+</button></div></div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside class="carrito-sidebar">
+            <h3><i class="fas fa-shopping-cart"></i> Tu Carrito</h3>
+            <div id="lista-carrito" class="lista-items">
+                <p class="vacio">Vacío</p>
+            </div>
+            <div class="total-linea">Total: S/ <span id="total">0.00</span></div>
+            <input type="text" id="cliente-nombre" placeholder="Tu Nombre" class="input-pedido">
+            <input type="text" id="cliente-direccion" placeholder="Dirección / Referencia" class="input-pedido">
+            <a id="whatsapp-link" href="#" target="_blank" class="btn-whatsapp"><i class="fab fa-whatsapp"></i>PEDIR POR WHATSAPP</a>
+        </aside>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-box">
+                <h4><i class="fas fa-clock"></i>Horarios de atencion</h4>
+                <p>Martes a Domingos</p>
+                <p>12:30 pm - 11:00 pm</p>
+            </div>
+
+            <div class="footer-box">
+                <h4><i class="fas fa-map-marker-alt"></i> Ubicacion</h4>
+                <p>KM 4.5 CARRETERA PIMENTEL</p>
+                <P>REREFENCIA: Cruce con el colegio Algarrobos</P>
+            </div>
+
+            <div class="footer-box">
+                <h4><i class="fas fa-phone"></i> Pedidos</h4>
+                <p>📞928 371 660</p>
+            </div>
+        </div>
+
+        <p class="footer-copy">© 2026 MAC CHIKEN - TODOS LOS DERECHOS RESERVADOS</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

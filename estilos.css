@@ -1,0 +1,427 @@
+:root {
+    --rojo: #e63946;
+    --amarillo: #D9E021;
+    --oscuro: #1d3557;
+}
+
+html { scroll-behavior: smooth; } /* Esto arregla la navegación */
+
+body { font-family: 'Segoe UI', sans-serif; margin: 0; background: #f8f9fa; }
+
+header { 
+    background: var(--amarillo);
+    padding: 10px 0; 
+    position: sticky; 
+    top: 0; 
+    z-index: 1000; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.logo { color: white; margin: 0; font-size: 1.8em; }
+
+nav ul { list-style: none; display: flex; gap: 15px; padding: 0; }
+nav a { color: white; text-decoration: none; font-weight: bold; font-size: 0.9em; }
+
+.container { max-width: 1200px; margin: 20px auto; padding: 0 20px; }
+.main-layout { display: grid; grid-template-columns: 1fr 320px; gap: 20px; }
+
+.categoria h2 { color: var(--rojo); border-bottom: 2px solid var(--amarillo); padding-bottom: 5px; }
+
+.productos-grid { 
+    display: grid; 
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 15px; 
+    margin-bottom: 30px; 
+}
+
+.card { background: white; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); text-align: center; }
+.precio { font-size: 1.2em; font-weight: bold; color: var(--rojo); margin: 10px 0; }
+
+.controles { display: flex; justify-content: center; align-items: center; gap: 15px; }
+.controles button { background: var(--amarillo); border: none; width: 30px; height: 30px; border-radius: 50%; cursor: pointer; font-weight: bold; }
+
+.carrito-sidebar { 
+    background: white; 
+    padding: 20px; 
+    border-radius: 10px; 
+    position: sticky; 
+    top: 80px; 
+    height: fit-content; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1); 
+}
+
+.input-pedido { width: 100%; padding: 10px; margin: 5px 0; border: 1px solid #ddd; border-radius: 5px; }
+.btn-whatsapp { 
+    display: block; 
+    background: #25d366; 
+    color: white; 
+    text-align: center; 
+    padding: 12px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    font-weight: bold; 
+    margin-top: 10px;
+}
+
+.item-carrito { display: flex; justify-content: space-between; border-bottom: 1px solid #eee; padding: 5px 0; font-size: 0.85em; }
+.btn-del { background: #ff4d4d; color: white; border: none; padding: 2px 5px; cursor: pointer; border-radius: 3px; }
+
+@media (max-width: 800px) {
+    .main-layout { grid-template-columns: 1fr; }
+    .carrito-sidebar { position: static; }
+}
+
+
+/* ===== ICONO WHATSAPP ===== */
+.btn-whatsapp i {
+    margin-right: 8px;
+    font-size: 1.1em;
+}
+
+
+/* ===== MEJORA PROFESIONAL DE IMÁGENES ===== */
+.card img {
+    width: 100%;
+    height: 140px;          /* altura uniforme */
+    object-fit: cover;      /* recorta sin deformar */
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #f1f1f1;
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+    font-size: 0.95em;
+    min-height: 40px;
+}
+
+.categoria {
+    scroll-margin-top: 90px; /* evita que el header tape el título */
+}
+
+.controles button:hover {
+    background: var(--rojo);
+    color: white;
+}
+
+/* === TABLETS === */ 
+@media (max-width: 1024px) {
+    .header-content {
+        flex-direction: column;
+        gap: 10;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .productos-grid {
+        grid-template-columns: repeat(auto-fill,minmax(200px,1fr));
+    }
+}
+
+.productos-grid {
+    grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+}
+}
+
+/* === CELULARES === */
+@media (max-width: 600px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    .logo {
+        font-size: 1.4em;
+        text-align:center;
+    }
+
+    mav ul {
+        gap: 10px;
+
+    }
+
+    nan a {
+        font-size:0.8em;
+    }
+
+    .productos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: : 100px;
+    }
+
+    .controles {
+        gap:10px;
+    }
+
+    .carrito-sidebar {
+        margin-top; 20px;
+    }
+
+    .btn-whatsapp {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+/* ================================
+   ANIMACIÓN LUZ / BRASA GENERAL
+================================ */
+
+@keyframes luzBrasa {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 300% 50%; }
+}
+
+/* Clase reutilizable de luz */
+.luz-brasa {
+    position: relative;
+    z-index: 1;
+}
+
+.luz-brasa::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 30px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #ffcc00,
+        #ff6600,
+        #ffcc00,
+        transparent
+    );
+    background-size: 300% 300%;
+    animation: luzBrasa 4s linear infinite;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/* Hover más intenso */
+.luz-brasa:hover::before {
+    opacity: 1;
+    animation-duration: 2s;
+}
+
+/* === premiun === */
+
+header h1 {
+    display: inline-block;
+    padding: 8px 18px;
+    border-radius: 40px;
+}
+
+/* Aplicar animación */
+header h1 {
+    position: relative;
+}
+
+header h1::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 40px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #ffffff,
+        #ffcc00,
+        #ffffff,
+        transparent
+    );
+    background-size: 300% 300%;
+    animation: luzBrasa 5s linear infinite;
+    opacity: 0.5;
+    z-index: -1;
+}
+
+/* === menu-brsas-mostros-piqueosetc === */
+nav a {
+    position: relative;
+    padding: 6px 14px;
+    border-radius: 22px;
+}
+
+/* Luz animada */
+nav a::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: 22px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #ffcc00,
+        #ff6600,
+        #ffcc00,
+        transparent
+    );
+    background-size: 300% 300%;
+    animation: luzBrasa 4s linear infinite;
+    opacity: 0.4;
+    z-index: -1;
+}
+
+/* Hover */
+nav a:hover::before {
+    opacity: 1;
+    animation-duration: 1.5s;
+}
+
+/* === wasap === */
+.whatsapp,
+.btn-whatsapp,
+button.whatsapp,
+a.whatsapp {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* === whastapp === */
+.whatsapp,
+.btn-whatsapp,
+button.whatsapp,
+a.whatsapp {
+    position: relative;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+/* Luz WhatsApp */
+.whatsapp::before,
+.btn-whatsapp::before,
+button.whatsapp::before,
+a.whatsapp::before {
+    content: "";
+    position: absolute;
+    inset: -3px;
+    border-radius: 30px;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        #25D366,
+        #ffffff,
+        #25D366,
+        transparent
+    );
+    background-size: 300% 300%;
+    animation: luzBrasa 3s linear infinite;
+    opacity: 0.6;
+    z-index: -1;
+}
+
+/* === Footer === */
+.footer {
+    background: : var(--amarillo);
+    color:black;
+    margin-top: 40px;
+    padding: 30px 20px 15px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-box h4 {
+    color: var(--rojo);
+    margin-bottom: 10px;
+}
+
+.footer-box p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.8em;
+    margin-top: 20px;
+    opacity: 0.8;
+}
+
+/* ================================
+   ARREGLO VISUAL DEL FOOTER
+================================ */
+
+/* Fuerza el footer a ocupar todo el ancho */
+.footer {
+    width: 100%;
+    background: var(--amarillo);
+    margin-top: 60px;
+}
+
+/* Centra y compacta el contenido */
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+/* Cada bloque del footer */
+.footer-box {
+    max-width: 260px;
+}
+
+/* Iconos más visibles */
+.footer-box i {
+    margin-right: 6px;
+    color: var(--amarillo);
+}
+
+/* Texto más compacto */
+.footer-box p {
+    margin: 4px 0;
+    font-size: 0.85em;
+}
+
+/* Línea final */
+.footer-copy {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    margin-top: 15px;
+    padding-top: 10px;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+/* ===== FOOTER RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .footer-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .footer-box {
+        max-width: 100%;
+    }
+}
